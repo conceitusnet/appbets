@@ -13,15 +13,21 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get ajuda" do
-    get static_pages_ajuda_url
+    get ajuda_path
     assert_response :success
     assert_select "title", "Ajuda | Bolão do brasileirão 2017"
   end
 
   test "should get regras" do
-    get static_pages_regras_url
+    get regras_path
     assert_response :success
     assert_select "title", "Regras | Bolão do brasileirão 2017"
+  end
+
+  test "should get contatos" do
+    get contatos_path
+    assert_response :success
+    assert_select "title", "Contatos | Bolão do brasileirão 2017"
   end
 
 end

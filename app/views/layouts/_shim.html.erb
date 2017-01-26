@@ -1,0 +1,15 @@
+<script type="text/javascript">
+      var jumboHeight = $('.jumbotron').outerHeight();
+        function parallax(){
+          var scrolled = $(window).scrollTop();
+    $('.bg').css('height', (jumboHeight-scrolled) + 'px');
+  }
+
+  $(window).scroll(function(e){
+    parallax();
+  });
+</script>
+<!--[if lt IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+  </script>
+<![endif]-->
