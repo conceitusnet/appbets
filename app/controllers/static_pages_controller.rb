@@ -4,4 +4,8 @@ class StaticPagesController < ApplicationController
 
   def ajuda
   end
+
+  def regras
+
+  end
 end
