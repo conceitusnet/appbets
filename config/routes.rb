@@ -7,5 +7,7 @@ Rails.application.routes.draw do
   get  '/regras',    to: 'static_pages#regras'
   get  '/contatos',  to: 'static_pages#contatos'
   get  '/cadastro',  to: 'users#new'
+  post '/cadastro',  to: 'users#create'
+  resources :users
 
 end
