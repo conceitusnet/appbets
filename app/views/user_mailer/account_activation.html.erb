@@ -1,0 +1,11 @@
+<h1>Bolão do brasileirão 2017</h1>
+
+<p>
+  Oi <%= @user.name %>,
+</p>
+
+<p>
+  Bem vindo ao Bolão do brasileirão! Clique no link abaixo para ativar sua conta
+</p>
+<%= link_to "Ativar", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>

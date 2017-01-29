@@ -18,9 +18,9 @@ class UsersController < ApplicationController
   def create
      @user = User.new(user_params)
     if @user.save
-      log_in @user
-      flash[:success] = "Bem vindo ao AppBets"
-      redirect_to @user
+      UserMailer.account_activation(@user).deliver_now
+      flash[:info] = "Por favor, confira seu email para ativar sua conta."
+      redirect_to root_url
     else
       render 'new'
     end
